@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="portfolio.css">
+        <title>Giorgio Manfrinato</title>
+        <link rel="icon" href="img/logo.png">
+    </head>
+    <body>
+      <header class="header">
+        <!-- bottone del menu -->
+        <button id="nome"
+                class="nome"
+                type="button"
+                aria-controls="headerBtn_container"
+                aria-expanded="false">
+          Giorgio.dev
+        </button>
+    
+        <div id="headerBtn_container" class="nav-buttons" role="menu" aria-hidden="true">
+          <button class="headerBtn" data-target="home" type="button" value="1">Home</button>
+          <button class="headerBtn" data-target="about" type="button" value="2">Chi sono</button>
+          <button class="headerBtn" data-target="projects" type="button" value="3">Progetti</button>
+          <button class="headerBtn" data-target="services" type="button" value="4">Servizi</button>
+          <button class="headerBtn" data-target="contact" type="button" value="5">Scrivimi</button>
+        </div>
+    
+        <img src="img/logo_sensa_sfondo.png" alt="logo" id="header_logo"/>
+      </header>
+      
+      <main class="main main_1" id="main">
+        <!-- *__slide1: home__ -->
+        <div class="slide" id="slide_home">
+          <div class="home_tit_container">
+            <h1 id="home_tit">Siti e algoritmi su misura</h1>
+            <p><em><u>trasforma le tue idee in realtà</u></em></p>
+          </div>
+
+          <div class="presentation">
+            <p>
+              Ciao, sono <strong>Giorgio</strong>, un giovane sviluppatore appassionato di tecnologia.<br>
+              Creo <span class="highlight">siti web moderni</span> e <span class="highlight">applicazioni su misura</span>, 
+              curando sia il design che la logica.
+            </p>
+          </div>
+
+          <div class="cta">
+            <p>Scopri di più sul mio lavoro o contattami per creare insieme il tuo prossimo progetto digitale</p>
+            <div class="buttons">
+              <button href="#progetti" class="btn primary">Scopri i miei progetti</button>
+              <button href="#contatti" class="btn secondary">Contattami</button>
+            </div>
+          </div>
+          
+        </div>
+        <!-- *__slide2: chi_sono__ -->
+        <div class="slide" id="slide_about">
+          <div class="introduzione">
+            <p>
+              Ciao, mi chiamo Giorgio e sono uno studente del liceo scientifico con una grande passione per la programmazione. 
+              Mi piace trasformare le idee in progetti concreti, combinando logica e creatività per sviluppare soluzioni digitali utili e moderne.
+            </p>
+            
+          </div>
+          <div class="racconti">
+            <div class="racconto_personale">
+              <h2>Il mio percorso nello sviluppo</h2>
+              <hr>
+              <p>
+                Ho iniziato ad avvicinarmi al mondo del coding per curiosità, sperimentando con piccoli script in Python e qualche pagina web. 
+                Con il tempo questa passione è cresciuta: oggi sviluppo siti e applicazioni web, curando sia l’aspetto grafico che il funzionamento interno. 
+                Mi piace affrontare nuove sfide e trovare soluzioni pratiche ai problemi, perché credo che la tecnologia possa semplificare la vita quotidiana. 
+                Il mio obiettivo è crescere come sviluppatore e costruire progetti sempre più completi, unendo design e funzionalità.
+              </p>
+            </div>
+            <hr id="hr_slide2">
+            <div class="competenze">
+              <h2>Cosa so fare</h2>
+              <hr>
+              <p>
+                Lavoro principalmente con <strong>Python</strong>, sia per applicazioni web (Flask, Django) sia per automazioni e gestione dati. 
+                Utilizzo <strong>HTML, CSS e JavaScript</strong> per lo sviluppo frontend e curo l’integrazione con <strong>database SQL</strong> quando serve gestire informazioni complesse. 
+                Mi piace lavorare in modo organizzato, sfruttando <strong>Git e GitHub</strong> per versionare i progetti e collaborare in maniera più professionale. 
+                Oltre allo sviluppo web, mi interessa anche l’idea di creare strumenti che possano semplificare processi ripetitivi attraverso script di automazione.
+              </p>
+            </div>
+          </div>
+          <div class="chiusura">
+            <p>
+              Al di fuori del coding, mi appassionano la scienza e la tecnologia in generale: mi piace capire come funzionano le cose e trovare collegamenti tra mondi diversi. 
+              In ogni progetto cerco di unire rigore e creatività, con l’idea che ogni problema abbia una soluzione digitale pronta per essere scoperta.
+            </p>
+          </div>
+        </div>
+        <!-- *__slide3: progetti__ -->
+        <div class="slide" id="slide_projects">
+          <h1><u>I Miei Progetti</u></h1>
+          <div class="card_container">
+            <div class="project-card">
+              <div class="top_card_container">
+                <img src="img/logo_omnia.png" alt="Screenshot progetto">
+                <div class="project-info">
+                  <h2><u>OMNIA</u></h2>
+                  <p>Sito di una start up che offre consigli sui prezi di vendita analizzando i prezzi passati e l'andamento del mercato mondiale</p>
+                </div>
+              </div>
+              <div class="bottom_card_container">
+                <a class="card_btn">IN SVILUPPO</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="top_card_container">
+                <img src="img/calcolatrice.png" alt="Screenshot progetto">
+                <div class="project-info">
+                  <h2><u>CALCOLATRICE</u></h2>
+                  <p>calcolatrce scientifica con form di ricerca di elementi della tavola periodica</p>
+                </div>
+              </div>
+              <div class="bottom_card_container">
+                <a class="card_btn" href="https://giorgio-09.github.io/Calcolatrice/">VEDI PROGETTO</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="top_card_container">
+                <img src="img/tris.png" alt="Screenshot progetto">
+                <div class="project-info">
+                  <h2><u>TRIS</u></h2>
+                  <p>Gioco del tris che offre modalità 1v1 e 1_vs_computer</p>
+                </div>
+              </div>
+              <div class="bottom_card_container">
+                <a class="card_btn" href="https://giorgio-09.github.io/Tris_Game/">VEDI PROGETTO</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="top_card_container">
+                <img src="img/userQA.png" alt="Screenshot progetto">
+                <div class="project-info">
+                  <h2><u>FLASH CARD</u></h2>
+                  <p>Programma che permette di registrare una domanda e la rispettiva risposta e fare flash card con le domande inserite. <u>database non ancora disponibile</u></p>
+                </div>
+              </div>
+              <div class="bottom_card_container">
+                <a class="card_btn" href="https://giorgio-09.github.io/userQA/">VEDI PROGETTO</a>
+              </div>
+            </div>
+            <a class="more_project_btn" href="https://github.com/Giorgio-09?tab=overview&from=2025-08-01&to=2025-08-31">VEDI ALTRI PROGETTI</a>
+          </div>
+        </div>
+
+        <div id="slide_services" class="slide">
+          <div class="services-header">
+            <h1>I miei Servizi</h1>
+            <p>Offro soluzioni complete per chi vuole un sito web veloce, bello e funzionale. 
+               Ogni servizio è pensato per aiutarti a crescere online.</p>
+          </div>
+        
+          <div class="services-container">
+            <div class="service-card">
+              <div class="icon">💻</div>
+              <h2>Sviluppo Web</h2>
+              <p>Realizzo siti web moderni, responsive e ottimizzati per ogni dispositivo.</p>
+            </div>
+        
+            <div class="service-card">
+              <div class="icon">🎨</div>
+              <h2>Design UI/UX</h2>
+              <p>Creo interfacce belle e facili da usare per un'esperienza utente piacevole.</p>
+            </div>
+        
+            <div class="service-card">
+              <div class="icon">⚙️</div>
+              <h2>Automazione</h2>
+              <p>Costruisco tool e script personalizzati per semplificare i processi aziendali.</p>
+            </div>
+        
+            <div class="service-card">
+              <div class="icon">🚀</div>
+              <h2>SEO & Performance</h2>
+              <p>Ottimizzo i siti per essere più veloci e visibili nei motori di ricerca.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div id="slide_contact" class="slide">
+          <div class="contact-header">
+            <h1>Contattami</h1>
+            <p>Hai un progetto in mente o vuoi semplicemente chiedere maggiori informazioni? Compila il form e ti risponderò il prima possibile.</p>
+          </div>
+        
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="user_name" placeholder="Il tuo nome" required>
+            </div>
+        
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="user_email" placeholder="La tua email" required>
+            </div>
+        
+            <div class="form-group">
+              <label for="message">Messaggio</label>
+              <textarea id="message" name="message" rows="5" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+            </div>
+        
+            <button type="submit" class="btn primary">Invia</button>
+          </form>
+        </div>
+        
+      </main>
+
+      <!-- *__footer__ -->
+      <footer class="site-footer">
+        <p>© 2025 Giorgio — Tutti i diritti riservati</p>
+        <div class="footer-content">
+          <div class="footer-links">
+            <button onclick="location.href='#home'">Home</button>
+            <button onclick="location.href='#progetti'">Progetti</button>
+            <button onclick="location.href='#servizi'">Servizi</button>
+            <button onclick="location.href='#contatti'">Contatti</button>
+          </div>
+          
+          <div class="socials">
+            <a href="https://github.com/Giorgio-09?tab=overview&from=2025-08-01&to=2025-08-31" target="_blank" class="github">GitHub</a>
+            <a href="https://www.fiverr.com/pe/8zeewd4" target="_blank" class="fiverr">Fiverr</a>
+            <a class="libutton linkedin" href="http://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=giorgio-manfrinato-6695b3383" target="_black">Link Segui</a>
+          </div>
+        </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script src="portfolio.js"></script>
+    </body>
+</html>
+
