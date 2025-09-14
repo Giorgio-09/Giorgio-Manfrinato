@@ -17,7 +17,7 @@
 
 /* === OVERRIDES: zoom & più scroll === */
 :root{
-    --zoom: 1.12;           /* 1.12 ≈ +12% ; prova 1.2 o 1.25 se vuoi ancora più grande */
+    --zoom: 1.25;           /* 1.12 ≈ +12% ; prova 1.2 o 1.25 se vuoi ancora più grande */
 }
 
 /* tipografia globale (scala rem) */
