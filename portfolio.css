@@ -613,27 +613,27 @@ main{ flex:1; min-width:0 }
 /* Tablet / menu slide-in */
 @media (max-width:1200px){
     .nav-buttons{
-    position:fixed;
-    top:var(--header-h);
-    left:-260px;
-    width:240px;
-    height:calc(100vh - var(--header-h));
-    background:var(--bg-light);
-    display:flex;
-    flex-direction:column;
-    gap:.6rem;
-    padding:1rem;
-    box-shadow:2px 0 8px rgba(0,0,0,.4);
-    transition:left .28s ease;
-    z-index:1000;
-    border-right:1px solid rgba(0,0,0,.12);
+        position:fixed;
+        top:84px;
+        left:-260px;
+        width:240px;
+        height:calc(100vh - var(--header-h));
+        background:var(--bg-light);
+        display:flex;
+        flex-direction:column;
+        gap:.6rem;
+        padding:1rem;
+        box-shadow:2px 0 8px rgba(0,0,0,.4);
+        transition:left .28s ease;
+        z-index:1000;
+        border-right:1px solid rgba(0,0,0,.12);
     }
     .nav-buttons.active{ left:0 }
     .headerBtn{
-    width:100%;
-    text-align:left;
-    font-size:1rem;
-    padding:.9rem 1rem;
+        width:100%;
+        text-align:left;
+        font-size:1rem;
+        padding:.9rem 1rem;
     }
     #header_logo{ height:70% }
 }
