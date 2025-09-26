@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  // toggle menu (apre/chiude)
+  // toggle menu
   const setOpen = (open) => {
     navButtons.classList.toggle('active', open);
     menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setOpen(!navButtons.classList.contains('active'));
   });
 
-  // chiude se clicchi fuori (solo mobile)
   document.addEventListener('click', (ev) => {
     const isSmall = window.innerWidth <= 1200;
     if (isSmall && navButtons.classList.contains('active') && !navButtons.contains(ev.target) && ev.target !== menuBtn) {
@@ -28,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // chiudi con Esc
   document.addEventListener('keydown', (ev) => {
     if (ev.key === 'Escape') setOpen(false);
   });
@@ -45,38 +43,48 @@ document.addEventListener('DOMContentLoaded', () => {
         if (el) el.scrollIntoView({ behavior: 'smooth' });
       }
 
-      // chiudi menu su mobile
       if (window.innerWidth <= 1200) setOpen(false);
     });
   });
 
   // === EmailJS per il form contatti ===
   if (window.emailjs) {
-    emailjs.init("cYrD4EGM9nyeNwm3l"); // 🔑 Sostituisci con la tua Public Key da EmailJS
+    emailjs.init("cYrD4EGM9nyeNwm3l"); // 🔑 Sostituisci con la tua Public Key
   }
 
   const contactForm = document.getElementById('contact-form');
-  const formStatus = document.getElementById('form-status');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-  
-    if (!window.emailjs) {
-      console.error("EmailJS non è stato caricato!");
-      return;
-    }
-  
-    emailjs.sendForm('service_m7sbyeo', 'template_5gryyku', e.target)
-      .then(() => {
-        formStatus.textContent = "✅ Messaggio inviato con successo!";
-        formStatus.style.color = "#27AE60";
-        contactForm.reset();
-      })
-      .catch((err) => {
-        console.error("Errore:", err);
-        formStatus.textContent = "❌ Si è verificato un errore. Riprova più tardi.";
-        formStatus.style.color = "#E74C3C";
-      });
-  });
-  
+      if (!window.emailjs) {
+        console.error("EmailJS non è stato caricato!");
+        return;
+      }
+
+      emailjs.sendForm('service_m7sbyeo', 'template_5gryyku', e.target)
+        .then(() => {
+          showToast("✅ Messaggio inviato con successo!", "success");
+          contactForm.reset();
+        })
+        .catch((err) => {
+          console.error("Errore:", err);
+          showToast("❌ Si è verificato un errore. Riprova più tardi.", "error");
+        });
+    });
+  }
+
+  // === Toast Notification ===
+  function showToast(message, type) {
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    setTimeout(() => toast.classList.add('show'), 100);
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => toast.remove(), 300);
+    }, 3000);
+  }
 });

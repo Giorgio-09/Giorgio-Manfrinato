@@ -32,185 +32,215 @@
       <main class="main main_1" id="main">
         <!-- *__slide1: home__ -->
         <div class="slide" id="slide_home">
-          <div class="home_tit_container">
-            <h1 id="home_tit">Siti e algoritmi su misura</h1>
-            <p><em><u>trasforma le tue idee in realtà</u></em></p>
-          </div>
+          <div class="home_hero">
+            <!-- colonna sinistra: testo -->
+            <div class="home_content">
+              <h1 class="home_title">Trasforma le tue idee in <span class="highlight">progetti digitali</span></h1>
+              <p class="home_subtitle">Creo siti web e applicazioni su misura, curando design, performance e logica. 
+                Il tuo prossimo progetto parte da qui.</p>
 
-          <div class="presentation">
-            <p>
-              Ciao, sono <strong>Giorgio</strong>, un giovane sviluppatore appassionato di tecnologia.<br>
-              Creo <span class="highlight">siti web moderni</span> e <span class="highlight">applicazioni su misura</span>, 
-              curando sia il design che la logica.
-            </p>
-          </div>
+              <!-- CTA -->
+              <div class="home_cta">
+                <button class="btn primary" onclick="document.querySelector('#slide_projects').scrollIntoView({behavior:'smooth'})">
+                  🚀 Scopri i miei progetti
+                </button>
+                <button class="btn secondary" onclick="document.querySelector('#slide_contact').scrollIntoView({behavior:'smooth'})">
+                  📩 Contattami
+                </button>
+              </div>
+            </div>
 
-          <div class="cta">
-            <p>Scopri di più sul mio lavoro o contattami per creare insieme il tuo prossimo progetto digitale</p>
-            <div class="buttons">
-              <button href="#progetti" class="btn primary">Scopri i miei progetti</button>
-              <button href="#contatti" class="btn secondary">Contattami</button>
+            <!-- colonna destra: grafico/immagine -->
+            <div class="home_visual">
+              <div class="fake-chart">
+                <div class="bar" style="--h:80%"></div>
+                <div class="bar" style="--h:50%"></div>
+                <div class="bar" style="--h:95%"></div>
+                <div class="bar" style="--h:70%"></div>
+                <div class="bar" style="--h:60%"></div>
+              </div>
+              <p class="chart_caption">Risultati in crescita, come i tuoi progetti.</p>
             </div>
           </div>
-          
         </div>
+
         <!-- *__slide2: chi_sono__ -->
         <div class="slide" id="slide_about">
-          <div class="introduzione">
-            <p>
-              Ciao, mi chiamo Giorgio e sono uno studente del liceo scientifico con una grande passione per la programmazione. 
-              Mi piace trasformare le idee in progetti concreti, combinando logica e creatività per sviluppare soluzioni digitali utili e moderne.
-            </p>
-            
-          </div>
-          <div class="racconti">
-            <div class="racconto_personale">
-              <h2>Il mio percorso nello sviluppo</h2>
-              <hr>
-              <p>
-                Ho iniziato ad avvicinarmi al mondo del coding per curiosità, sperimentando con piccoli script in Python e qualche pagina web. 
-                Con il tempo questa passione è cresciuta: oggi sviluppo siti e applicazioni web, curando sia l’aspetto grafico che il funzionamento interno. 
-                Mi piace affrontare nuove sfide e trovare soluzioni pratiche ai problemi, perché credo che la tecnologia possa semplificare la vita quotidiana. 
-                Il mio obiettivo è crescere come sviluppatore e costruire progetti sempre più completi, unendo design e funzionalità.
+          <div class="about_container">
+            <!-- Colonna sinistra: testo + foto -->
+            <div class="about_text">
+              <h1 class="about_title">Ciao, sono <span class="highlight">Giorgio</span></h1>
+              <p class="about_intro">
+                Sono uno studente del liceo scientifico con una grande passione per la programmazione.  
+                Mi piace trasformare le idee in progetti concreti, unendo logica e creatività per sviluppare
+                soluzioni digitali utili e moderne.
+              </p>
+
+              <div class="about_cards">
+                <div class="about_card">
+                  <h2>📚 Il mio percorso</h2>
+                  <p>
+                    Ho iniziato sperimentando con piccoli script in Python e qualche pagina web.  
+                    Oggi sviluppo siti e applicazioni, curando sia il design che la logica.  
+                    Amo le sfide e credo che la tecnologia possa semplificare la vita.
+                  </p>
+                </div>
+
+                <div class="about_card">
+                  <h2>🛠️ Le mie competenze</h2>
+                  <p>
+                    Lavoro con <strong>Python</strong>, <strong>Flask</strong>, <strong>HTML/CSS/JS</strong>  
+                    e integro database SQL quando serve.  
+                    Uso <strong>Git e GitHub</strong> per versionare i progetti e collaborare in modo professionale.
+                  </p>
+                </div>
+              </div>
+
+              <p class="about_outro">
+                Oltre al coding mi appassionano scienza e tecnologia:  
+                cerco sempre di unire rigore e creatività per trovare soluzioni digitali innovative.
               </p>
             </div>
-            <hr id="hr_slide2">
-            <div class="competenze">
-              <h2>Cosa so fare</h2>
-              <hr>
-              <p>
-                Lavoro principalmente con <strong>Python</strong>, sia per applicazioni web (Flask, Django) sia per automazioni e gestione dati. 
-                Utilizzo <strong>HTML, CSS e JavaScript</strong> per lo sviluppo frontend e curo l’integrazione con <strong>database SQL</strong> quando serve gestire informazioni complesse. 
-                Mi piace lavorare in modo organizzato, sfruttando <strong>Git e GitHub</strong> per versionare i progetti e collaborare in maniera più professionale. 
-                Oltre allo sviluppo web, mi interessa anche l’idea di creare strumenti che possano semplificare processi ripetitivi attraverso script di automazione.
-              </p>
+
+            <!-- Colonna destra: immagine profilo o illustrazione -->
+            <div class="about_image">
+              <img src="img/logo_sensa_sfondo.png" alt="Foto di Giorgio" />
             </div>
-          </div>
-          <div class="chiusura">
-            <p>
-              Al di fuori del coding, mi appassionano la scienza e la tecnologia in generale: mi piace capire come funzionano le cose e trovare collegamenti tra mondi diversi. 
-              In ogni progetto cerco di unire rigore e creatività, con l’idea che ogni problema abbia una soluzione digitale pronta per essere scoperta.
-            </p>
           </div>
         </div>
+
         <!-- *__slide3: progetti__ -->
         <div class="slide" id="slide_projects">
-          <h1><u>I Miei Progetti</u></h1>
-          <div class="card_container">
-            <div class="project-card">
-              <div class="top_card_container">
-                <img src="img/logo_omnia.png" alt="Screenshot progetto">
-                <div class="project-info">
-                  <h2><u>OMNIA</u></h2>
-                  <p>Sito di una start up che offre consigli sui prezi di vendita analizzando i prezzi passati e l'andamento del mercato mondiale</p>
+          <div class="projects_container">
+            <h1 class="projects_title">🚀 I miei <span class="highlight">Progetti</span></h1>
+            <p class="projects_subtitle">
+              Ecco alcuni dei lavori che ho realizzato: dal design alla logica, ogni progetto è stato un’occasione per imparare e migliorare.
+            </p>
+
+            <div class="projects_grid">
+              <div class="project_card">
+                <img src="img/logo_omnia.png" alt="Screenshot progetto OMNIA">
+                <div class="project_content">
+                  <h2>OMNIA</h2>
+                  <p>Sito per una startup che analizza i prezzi e le tendenze di mercato per aiutarti a scegliere i migliori prezzi di vendita.</p>
+                  <span class="tag in-progress">In sviluppo</span>
                 </div>
               </div>
-              <div class="bottom_card_container">
-                <a class="card_btn">IN SVILUPPO</a>
+
+              <div class="project_card">
+                <img src="img/calcolatrice.png" alt="Screenshot progetto Calcolatrice">
+                <div class="project_content">
+                  <h2>Calcolatrice</h2>
+                  <p>Calcolatrice scientifica con ricerca di elementi chimici. Perfetta per studenti di liceo.</p>
+                  <a href="https://giorgio-09.github.io/Calcolatrice/" target="_blank" class="project_btn">Vedi Progetto</a>
+                </div>
+              </div>
+
+              <div class="project_card">
+                <img src="img/tris.png" alt="Screenshot progetto Tris">
+                <div class="project_content">
+                  <h2>Tris Game</h2>
+                  <p>Gioco del tris con modalità 1v1 e sfida contro il computer.</p>
+                  <a href="https://giorgio-09.github.io/Tris_Game/" target="_blank" class="project_btn">Vedi Progetto</a>
+                </div>
+              </div>
+
+              <div class="project_card">
+                <img src="img/userQA.png" alt="Screenshot progetto Flash Card">
+                <div class="project_content">
+                  <h2>Flash Card</h2>
+                  <p>Programma per registrare domande e risposte e allenarsi con flash card personalizzate.</p>
+                  <a href="https://giorgio-09.github.io/userQA/" target="_blank" class="project_btn">Vedi Progetto</a>
+                </div>
               </div>
             </div>
 
-            <div class="project-card">
-              <div class="top_card_container">
-                <img src="img/calcolatrice.png" alt="Screenshot progetto">
-                <div class="project-info">
-                  <h2><u>CALCOLATRICE</u></h2>
-                  <p>calcolatrce scientifica con form di ricerca di elementi della tavola periodica</p>
-                </div>
-              </div>
-              <div class="bottom_card_container">
-                <a class="card_btn" href="https://giorgio-09.github.io/Calcolatrice/">VEDI PROGETTO</a>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="top_card_container">
-                <img src="img/tris.png" alt="Screenshot progetto">
-                <div class="project-info">
-                  <h2><u>TRIS</u></h2>
-                  <p>Gioco del tris che offre modalità 1v1 e 1_vs_computer</p>
-                </div>
-              </div>
-              <div class="bottom_card_container">
-                <a class="card_btn" href="https://giorgio-09.github.io/Tris_Game/">VEDI PROGETTO</a>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="top_card_container">
-                <img src="img/userQA.png" alt="Screenshot progetto">
-                <div class="project-info">
-                  <h2><u>FLASH CARD</u></h2>
-                  <p>Programma che permette di registrare una domanda e la rispettiva risposta e fare flash card con le domande inserite. <u>database non ancora disponibile</u></p>
-                </div>
-              </div>
-              <div class="bottom_card_container">
-                <a class="card_btn" href="https://giorgio-09.github.io/userQA/">VEDI PROGETTO</a>
-              </div>
-            </div>
-            <a class="more_project_btn" href="https://github.com/Giorgio-09?tab=overview&from=2025-08-01&to=2025-08-31">VEDI ALTRI PROGETTI</a>
+            <a class="more_project_btn" href="https://github.com/Giorgio-09" target="_blank">🔗 Vedi altri progetti su GitHub</a>
           </div>
         </div>
 
+        <!-- *__slide4: servizi__ -->
         <div id="slide_services" class="slide">
-          <div class="services-header">
-            <h1>I miei Servizi</h1>
-            <p>Offro soluzioni complete per chi vuole un sito web veloce, bello e funzionale. 
-               Ogni servizio è pensato per aiutarti a crescere online.</p>
-          </div>
+          <div class="services_container">
+            <h1 class="services_title">💼 <span class="highlight">I miei Servizi</span></h1>
+            <p class="services_subtitle">
+              Offro soluzioni complete per chi vuole un sito web veloce, bello e funzionale.
+              Ogni servizio è pensato per aiutarti a crescere online.
+            </p>
         
-          <div class="services-container">
-            <div class="service-card">
-              <div class="icon">💻</div>
-              <h2>Sviluppo Web</h2>
-              <p>Realizzo siti web moderni, responsive e ottimizzati per ogni dispositivo.</p>
-            </div>
+            <div class="services_grid">
+              <div class="service_card">
+                <div class="icon">💻</div>
+                <h2>Sviluppo Web</h2>
+                <p>Realizzo siti web moderni, responsive e ottimizzati per ogni dispositivo.</p>
+              </div>
         
-            <div class="service-card">
-              <div class="icon">🎨</div>
-              <h2>Design UI/UX</h2>
-              <p>Creo interfacce belle e facili da usare per un'esperienza utente piacevole.</p>
-            </div>
+              <div class="service_card">
+                <div class="icon">🎨</div>
+                <h2>Design UI/UX</h2>
+                <p>Creo interfacce curate e intuitive per offrire la migliore esperienza utente.</p>
+              </div>
         
-            <div class="service-card">
-              <div class="icon">⚙️</div>
-              <h2>Automazione</h2>
-              <p>Costruisco tool e script personalizzati per semplificare i processi aziendali.</p>
-            </div>
+              <div class="service_card">
+                <div class="icon">⚙️</div>
+                <h2>Automazione</h2>
+                <p>Costruisco script e strumenti per semplificare processi ripetitivi.</p>
+              </div>
         
-            <div class="service-card">
-              <div class="icon">🚀</div>
-              <h2>SEO & Performance</h2>
-              <p>Ottimizzo i siti per essere più veloci e visibili nei motori di ricerca.</p>
+              <div class="service_card">
+                <div class="icon">🚀</div>
+                <h2>SEO & Performance</h2>
+                <p>Ottimizzo i siti per essere più veloci e visibili nei motori di ricerca.</p>
+              </div>
             </div>
           </div>
         </div>
+        
         
         <div id="slide_contact" class="slide">
-          <div class="contact-header">
-            <h1>Contattami</h1>
-            <p>Hai un progetto in mente o vuoi semplicemente chiedere maggiori informazioni? Compila il form e ti risponderò il prima possibile.</p>
+          <div class="contact_container">
+            <h1 class="contact_title">📩 <span class="highlight">Contattami</span></h1>
+            <p class="contact_subtitle">
+              Hai un progetto in mente o vuoi maggiori informazioni?  
+              Compila il form o usa direttamente i miei contatti qui sotto.
+            </p>
+        
+            <div class="contact_grid">
+              <!-- FORM DI CONTATTO -->
+              <form id="contact-form" class="contact_form">
+                <div class="form_group">
+                  <label for="name">Nome</label>
+                  <input type="text" id="name" name="user_name" placeholder="Il tuo nome" required>
+                </div>
+        
+                <div class="form_group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="user_email" placeholder="La tua email" required>
+                </div>
+        
+                <div class="form_group">
+                  <label for="message">Messaggio</label>
+                  <textarea id="message" name="message" rows="5" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+                </div>
+        
+                <button type="submit" class="btn primary">Invia</button>
+              </form>
+        
+              <!-- CARD CONTATTI -->
+              <div class="contact_card">
+                <h2>📞 I miei contatti</h2>
+                <p><strong>Telefono:</strong> <a href="tel:+393518226123">351 822 6123</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info.giorgiomanfrinato@gmail.com">info.giorgiomanfrinato@gmail.com</a></p>
+                <div class="contact_socials">
+                  <a href="https://github.com/Giorgio-09" target="_blank" class="social_btn">GitHub</a>
+                  <a href="http://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=giorgio-manfrinato-6695b3383" target="_blank" class="social_btn">LinkedIn</a>
+                  <a href="https://www.fiverr.com/pe/8zeewd4" target="_blank" class="social_btn">Fiverr</a>
+                </div>
+              </div>
+            </div>
           </div>
-        
-          <form id="contact-form" class="contact-form">
-            <div class="form-group">
-              <label for="name">Nome</label>
-              <input type="text" id="name" name="user_name" placeholder="Il tuo nome" required>
-            </div>
-        
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="user_email" placeholder="La tua email" required>
-            </div>
-        
-            <div class="form-group">
-              <label for="message">Messaggio</label>
-              <textarea id="message" name="message" rows="5" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
-            </div>
-        
-            <button type="submit" class="btn primary">Invia</button>
-          </form>
         </div>
+        
         
       </main>
 
