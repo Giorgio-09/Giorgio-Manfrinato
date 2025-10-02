@@ -17,7 +17,7 @@
 
 /* === OVERRIDES: zoom & più scroll === */
 :root{
---zoom: 1.25;           /* 1.12 ≈ +12% ; prova 1.2 o 1.25 se vuoi ancora più grande */
+--zoom: 1.50;           /* 1.12 ≈ +12% ; prova 1.2 o 1.25 se vuoi ancora più grande */
 }
 
 /* tipografia globale (scala rem) */
@@ -799,16 +799,6 @@ color:var(--bg-dark);
 }
 
 /* *========__slide 6: prezzi */
-/* === PREZZI === */
-#slide_prezzi {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: clamp(2rem, 6vw, 4rem);
-    background: linear-gradient(135deg, rgba(39,174,96,0.08), rgba(0,0,0,0.3));
-
-}
 
 /* Slide Prezzi */
 #slide_pricing {
