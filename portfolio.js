@@ -47,6 +47,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // gestione bottoni "Inizia ora" nei prezzi
+  document.querySelectorAll('.pricing_btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const value = btn.getAttribute('value');
+      if (value && main) main.className = 'main main_' + value;
+
+      const targetId = btn.getAttribute('data-target');
+      if (targetId) {
+        const el = document.getElementById(targetId);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      if (window.innerWidth <= 1200) setOpen(false);
+    });
+  });
+
   // === EmailJS per il form contatti ===
   if (window.emailjs) {
     emailjs.init("cYrD4EGM9nyeNwm3l"); // 🔑 Sostituisci con la tua Public Key

@@ -24,6 +24,8 @@
           <button class="headerBtn" data-target="projects" type="button" value="3">Progetti</button>
           <button class="headerBtn" data-target="services" type="button" value="4">Servizi</button>
           <button class="headerBtn" data-target="contact" type="button" value="5">Scrivimi</button>
+          <button class="headerBtn" data-target="prezzi" type="button" value="6">Prezzi</button>
+
         </div>
     
         <img src="img/logo_sensa_sfondo.png" alt="logo" id="header_logo"/>
@@ -196,7 +198,7 @@
           </div>
         </div>
         
-        
+        <!-- *__slide5: contatti__ -->
         <div id="slide_contact" class="slide">
           <div class="contact_container">
             <h1 class="contact_title"><span class="highlight">Contattami</span></h1>
@@ -237,11 +239,64 @@
                   <a href="https://www.fiverr.com/pe/8zeewd4" target="_blank" class="social_btn">Fiverr</a>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
         
+        <!-- *__slide6: prezzi__ -->
+        <div id="slide_prezzi" class="slide">
+          <div class="pricing-header">
+            <h1>I miei Prezzi</h1>
+            <p>Scegli il piano più adatto alle tue esigenze. Ogni pacchetto include supporto e soluzioni su misura per il tuo progetto.</p>
+          </div>
         
+          <div class="pricing-container">
+            <!-- Piano Base -->
+            <div class="pricing-card">
+              <h2>Starter</h2>
+              <p class="price">€99</p>
+              <ul class="pricing-features">
+                <li>Sito vetrina one-page</li>
+                <li>Design responsive</li>
+                <li>Personalizzazione colori e font</li>
+                <li>Hosting e dominio (non inclusi)</li>
+                <li>Database e funzioni avanzate (non inclusi)</li>
+              </ul>
+              <button class="btn primary pricing_btn" data-target="slide_contact" onclick="window.open('https://wa.me/393518226123?text=Ciao%20Giorgio,%20sono%20interessato%20al%20piano%20Starter','_blank')">Inizia ora</button>
+            </div>
+        
+            <!-- Piano Intermedio -->
+            <div class="pricing-card highlight">
+              <h2>Professional</h2>
+              <p class="price">€249</p>
+              <ul class="pricing-features">
+                <li>Sito multipagina (fino a 5 pagine)</li>
+                <li>Design moderno & UI/UX curata</li>
+                <li>Ottimizzazione SEO di base</li>
+                <li>Integrazione modulo contatti (EmailJS)</li>
+                <li>Assistenza per setup hosting</li>
+                <li>Funzioni complesse personalizzate (non incluse)</li>
+              </ul>
+              <button class="btn primary pricing_btn" data-target="slide_contact" onclick="window.open('https://wa.me/393518226123?text=Ciao%20Giorgio,%20sono%20interessato%20al%20piano%20Starter','_blank')">Inizia ora</button>
+            </div>
+        
+            <!-- Piano Avanzato -->
+            <div class="pricing-card">
+              <h2>Enterprise</h2>
+              <p class="price">€499</p>
+              <ul class="pricing-features">
+                <li>Web App completa o sito avanzato</li>
+                <li>Funzionalità personalizzate (login, database, automazioni)</li>
+                <li>Performance & SEO avanzata</li>
+                <li>Dashboard di amministrazione</li>
+                <li>Supporto dedicato post-lancio</li>
+                <li>Collaborazione tramite GitHub</li>
+              </ul>
+              <button class="btn primary pricing_btn" data-target="slide_contact" onclick="window.open('https://wa.me/393518226123?text=Ciao%20Giorgio,%20sono%20interessato%20al%20piano%20Starter','_blank')">Inizia ora</button>
+            </div>
+          </div>
+        </div>
       </main>
 
       <!-- *__footer__ -->

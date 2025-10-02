@@ -187,8 +187,9 @@ display:none;
 .main_2 > #slide_about,
 .main_3 > #slide_projects,
 .main_4 > #slide_services,
-.main_5 > #slide_contact{
-display:flex;
+.main_5 > #slide_contact,
+.main_6 > #slide_prezzi{
+    display:flex;
 }
 
 /** ===== slide 1: home ===== */
@@ -796,8 +797,118 @@ color:var(--bg-dark);
     grid-template-columns: 1fr;
     }
 }
+
+/* *========__slide 6: prezzi */
+/* === PREZZI === */
+#slide_prezzi {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: clamp(2rem, 6vw, 4rem);
+    background: linear-gradient(135deg, rgba(39,174,96,0.08), rgba(0,0,0,0.3));
+
+}
+
+/* Slide Prezzi */
+#slide_pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: clamp(2rem, 6vw, 4rem);
+    background: linear-gradient(135deg, rgba(39,174,96,0.08), rgba(0,0,0,0.3));
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.pricing-header h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.pricing-card {
+    background: linear-gradient(135deg, rgba(155, 89, 182, 0.08), rgba(0,0,0,0.3));
+    border-radius: 16px;
+    padding: 2rem;
+    flex: 1 1 300px;
+    width: auto;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+}
+
+.pricing-card.highlight {
+    border: 2px solid var(--accent);
+    transform: scale(1.05);
+}
+
+.pricing-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent);
+    margin: 1rem 0;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 2rem;
+    text-align: left;
+    width: 100%;
+}
+
+.pricing-features li {
+    margin: .5rem 0;
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+}
+
+.pricing-features li::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+.pricing_btn {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+}
   
-/* footer */
+  
+
+/** footer */
 .site-footer{
 width:100%;
 background:var(--bg-light);
