@@ -1045,3 +1045,99 @@ margin:0 auto;
     #slide_home .presentation{ padding:1.25rem; font-size:1rem }
     #slide_home .cta{ font-size:.95rem }
 }
+
+/* ========= RESPONSIVE FIXES (non-breaking) ========= */
+
+/* Header: padding di scroll per sticky */
+html{ scroll-padding-top: var(--header-h) }
+
+/* Slide: evita height eccessivi su mobile, usa dvh dove supportato */
+.slide{
+  min-height: 92vh;
+}
+@supports(height: 100dvh){
+  .slide{ min-height: 92dvh; }
+}
+
+/* NAV mobile: usa top dinamico invece di valore fisso e z-index sicuro */
+@media (max-width:1200px){
+  .nav-buttons{
+    top: var(--header-h);
+    left: -260px;
+    height: calc(100dvh - var(--header-h));
+    max-height: calc(100vh - var(--header-h));
+    z-index: 1100;
+  }
+  .nav-buttons.active{ left: 0; }
+}
+
+/* Home: impaginazione invariata ma colonna su schermi piccoli */
+@media (max-width: 900px){
+  .home_hero{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .home_visual{ width: 100%; }
+  .fake-chart{ width: 100%; max-width: 280px; margin-inline: auto; }
+  .home_cta{ justify-content: center; }
+}
+
+/* About: griglia che collassa a 1 col senza cambiare l’ordine */
+@media (max-width: 900px){
+  .about_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .about_image img{ max-width: 260px; }
+}
+
+/* Projects: card fluide e immagini proporzionate */
+.projects_grid{
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+@media (max-width: 600px){
+  .project_card img{ height: 150px; }
+}
+
+/* Services: fix del selettore typo (mantiene impaginazione) */
+.services_container{ width: 100%; }
+.services_grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+
+/* Contact: passa a singola colonna su tablet in giù */
+@media (max-width: 860px){
+  .contact_grid{ grid-template-columns: 1fr; }
+}
+
+/* Pricing: card elastiche senza “saltare” di riga */
+.pricing-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+.pricing-card{
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+/* Footer: stack verticale su mobile, centrato */
+@media (max-width: 768px){
+  .footer-content{
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+/* Focus & motion: accessibilità invariata ma coerente */
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

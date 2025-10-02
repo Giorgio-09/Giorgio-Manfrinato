@@ -8,6 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
+  // === utils: smart scroll con offset header
+  const smartScrollTo = (el) => {
+    if (!el) return;
+    const header = document.querySelector('.header');
+    const headerH = header ? header.offsetHeight : 0;
+    const rect = el.getBoundingClientRect();
+    const y = window.scrollY + rect.top - (headerH - 1);
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  };
+
   // toggle menu
   const setOpen = (open) => {
     navButtons.classList.toggle('active', open);
@@ -31,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ev.key === 'Escape') setOpen(false);
   });
 
-  // gestione bottoni
+  // gestione bottoni del menu
   navButtons.querySelectorAll('.headerBtn').forEach(btn => {
     btn.addEventListener('click', () => {
       const value = btn.getAttribute('value');
@@ -40,15 +50,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetId = btn.getAttribute('data-target');
       if (targetId) {
         const el = document.getElementById(targetId);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
+        if (el) smartScrollTo(el);
       }
 
       if (window.innerWidth <= 1200) setOpen(false);
     });
   });
 
-  // gestione bottoni "Inizia ora" nei prezzi
-  document.querySelectorAll('.pricing_btn').forEach(btn => {
+  // CTA interne (es. in home, pricing, footer)
+  document.querySelectorAll('[data-target]').forEach(btn => {
+    // evitare doppie bind sui bottoni del menu (già gestiti sopra)
+    if (navButtons.contains(btn)) return;
     btn.addEventListener('click', () => {
       const value = btn.getAttribute('value');
       if (value && main) main.className = 'main main_' + value;
@@ -56,16 +68,34 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetId = btn.getAttribute('data-target');
       if (targetId) {
         const el = document.getElementById(targetId);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
+        if (el) smartScrollTo(el);
       }
 
       if (window.innerWidth <= 1200) setOpen(false);
     });
   });
 
+  // gestione bottoni "Inizia ora" nei prezzi (già hanno data-target="slide_contact")
+  document.querySelectorAll('.pricing_btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      if (targetId) {
+        const el = document.getElementById(targetId);
+        if (el) smartScrollTo(el);
+      }
+      if (window.innerWidth <= 1200) setOpen(false);
+    });
+  });
+
+  // Chiudi pannello se si torna a desktop
+  window.addEventListener('resize', () => {
+    if (window.matchMedia('(min-width: 1201px)').matches) setOpen(false);
+  });
+
   // === EmailJS per il form contatti ===
   if (window.emailjs) {
-    emailjs.init("cYrD4EGM9nyeNwm3l"); // 🔑 Sostituisci con la tua Public Key
+    // 🔑 Sostituisci con la tua Public Key
+    emailjs.init("cYrD4EGM9nyeNwm3l");
   }
 
   const contactForm = document.getElementById('contact-form');
@@ -75,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!window.emailjs) {
         console.error("EmailJS non è stato caricato!");
+        showToast("❌ Invio disabilitato: configura EmailJS.", "error");
         return;
       }
 
